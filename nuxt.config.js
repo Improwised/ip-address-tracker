@@ -33,14 +33,14 @@ export default {
 
   eslint: {
     /* module options */
-    extensions: ["js", "vue"],
-    exclude: ["node_modules"],
-    fix: true
+    extensions: ['js', 'vue'],
+    exclude: ['node_modules'],
+    fix: true,
   },
 
   stylelint: {
     /* module options */
-    fix: true
+    fix: true,
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
