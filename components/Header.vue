@@ -27,15 +27,15 @@ export default {
       default: null,
     },
   },
-}
+};
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 
 .header-div {
   text-align: center;
-  background-image: url('@/static/pattern-bg.png');
+  background-image: url("@/static/pattern-bg.png");
   background-size: cover;
   padding-top: 2%;
   padding-bottom: 8%;

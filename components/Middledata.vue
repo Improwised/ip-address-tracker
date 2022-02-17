@@ -7,7 +7,7 @@
     <div class="middle-input-div col-lg-3 col-sm-12">
       <label class="middle-label">LOCATION</label>
       <h1 class="middle-input">
-        {{ ipData.location.country + ' ' + ipData.location.region }}
+        {{ ipData.location.country + " " + ipData.location.region }}
       </h1>
     </div>
     <div class="middle-input-div col-lg-3 col-sm-12">
@@ -26,21 +26,21 @@ export default {
   props: {
     ipData: {
       default: {
-        ip: '',
+        ip: "",
         location: {
-          country: '',
-          region: '',
-          timezone: '',
+          country: "",
+          region: "",
+          timezone: "",
         },
-        isp: '',
+        isp: "",
       },
     },
   },
-}
+};
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 
 .middle-input {
   height: 45px;
@@ -70,7 +70,7 @@ export default {
   background: white;
   box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
   border-radius: 0.7em;
-  bottom: 10%;
+  bottom: 70px;
   margin: auto 15%;
   padding: 5% auto;
 }
