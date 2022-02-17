@@ -11,31 +11,31 @@
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: "IndexPage",
   data() {
     return {
-      ipAddress: '',
+      ipAddress: "",
       ipData: {
-        ip: '',
+        ip: "",
         location: {
-          country: '',
-          region: '',
-          timezone: '',
+          country: "",
+          region: "",
+          timezone: "",
         },
-        isp: '',
+        isp: "",
       },
-    }
+    };
   },
   methods: {
     async getIpData() {
       const res = await this.$axios.$get(
-        'https://geo.ipify.org/api/v2/country,city?apiKey=at_5jNicfri3nLpD3hOwy9LnQVQ89cf7&ipAddress=' +
+        "https://geo.ipify.org/api/v2/country,city?apiKey=at_5jNicfri3nLpD3hOwy9LnQVQ89cf7&ipAddress=" +
           this.ipAddress
-      )
-      this.ipData = res
+      );
+      this.ipData = res;
     },
   },
-}
+};
 </script>
 <style scoped>
 .middle-div {

@@ -28,13 +28,13 @@ export default {
       default: null,
     },
   },
-}
+};
 </script>
 
 <style scoped>
 .header-div {
   text-align: center;
-  background-image: url('@/static/pattern-bg.png');
+  background-image: url("@/static/pattern-bg.png");
   background-size: cover;
   padding-top: 2%;
   padding-bottom: 8%;
