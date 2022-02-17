@@ -6,6 +6,9 @@
       :get-ip-data="getIpData"
     />
     <Middledata :ip-data="ipData" />
+    <div class="map">
+      <Map :lat-lng="lat_lng" />
+    </div>
   </div>
 </template>
 
@@ -24,6 +27,7 @@ export default {
         },
         isp: '',
       },
+      lat_lng: [10.639455173438886, 9.292239482108867],
     }
   },
   methods: {
@@ -33,11 +37,12 @@ export default {
           this.ipAddress
       )
       this.ipData = res
+      this.lat_lng = [res.location.lat, res.location.lng]
     },
   },
 }
 </script>
-<style scoped>
+<style>
 .middle-div {
   display: flex;
   position: relative;
@@ -50,7 +55,9 @@ export default {
   padding: 5% auto;
 }
 
-.rline {
-  border-style: none;
+.map {
+  position: relative;
+  bottom: 160px;
+  z-index: 0;
 }
 </style>
