@@ -3,12 +3,13 @@
     <h1 class="header-heading">IP Address Tracker</h1>
     <div class="d-inline-flex">
       <input
-        v-model="newipaddress"
         class="ip-input px-5"
         placeholder="Search for any ip address"
         size="40"
+        :value="ipAddress"
+        @input="$emit('input', $event.target.value)"
       />
-      <button class="ip-button" @click="getipdata">
+      <button class="ip-button" @click="getIpData">
         <img :src="require('@/static/icon-arrow.svg')" alt="arrow icon" />
       </button>
     </div>
@@ -18,19 +19,14 @@
 <script>
 export default {
   props: {
-    ipaddress: {
-      type: Object,
+    ipAddress: {
+      type: String,
       default: null,
     },
-    getipdata: {
+    getIpData: {
       type: Function,
       default: null,
     },
-  },
-  data() {
-    return {
-      newipaddress: this.ipaddress,
-    }
   },
 }
 </script>

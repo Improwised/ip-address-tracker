@@ -1,15 +1,11 @@
 <template>
   <div>
-    <Header :ipaddress="ipaddress" :ipdata="ipadata" :getipdata="getipdata" />
-    <div class="middle-div row">
-      <Middledata :title="'IP ADDRESS'" :value="ipdata.ip" />
-      <Middledata
-        :title="'LOCATION'"
-        :value="ipdata.location.country + ' ' + ipdata.location.region"
-      />
-      <Middledata :title="'TIMEZONE'" :value="ipdata.location.timezone" />
-      <Middledata :title="'ISP'" :value="ipdata.isp" />
-    </div>
+    <Header
+      v-model="ipAddress"
+      :ip-address="ipAddress"
+      :get-ip-data="getIpData"
+    />
+    <Middledata :ip-data="ipData" />
   </div>
 </template>
 
@@ -18,8 +14,8 @@ export default {
   name: 'IndexPage',
   data() {
     return {
-      ipaddress: '',
-      ipdata: {
+      ipAddress: '',
+      ipData: {
         ip: '',
         location: {
           country: '',
@@ -31,12 +27,12 @@ export default {
     }
   },
   methods: {
-    async getipdata() {
+    async getIpData() {
       const res = await this.$axios.$get(
-        'https://geo.ipify.org/api/v2/country?apiKey=at_5jNicfri3nLpD3hOwy9LnQVQ89cf7&ipAddress=' +
-          this.ipaddress
+        'https://geo.ipify.org/api/v2/country,city?apiKey=at_5jNicfri3nLpD3hOwy9LnQVQ89cf7&ipAddress=' +
+          this.ipAddress
       )
-      this.ipdata = res
+      this.ipData = res
     },
   },
 }
@@ -49,8 +45,12 @@ export default {
   background: white;
   box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
   border-radius: 0.7em;
-  bottom: 60px;
+  bottom: 70px;
   margin: auto 15%;
   padding: 5% auto;
+}
+
+.rline {
+  border-style: none;
 }
 </style>
