@@ -13,5 +13,11 @@ module.exports = {
   // add your custom rules here
   rules: {
     "vue/multi-word-component-names": 0,
+    "vue/no-parsing-error": [
+      "error",
+      {
+        "invalid-first-character-of-tag-name": false,
+      },
+    ],
   },
 };

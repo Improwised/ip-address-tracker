@@ -47,6 +47,8 @@ export default {
           postalCode: "",
           timezone: "",
           region: "",
+          lat: "",
+          lng: "",
         },
         isp: "",
       },

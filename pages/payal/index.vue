@@ -20,11 +20,12 @@
           type="submit"
         ></button>
       </form>
-      <LocationInfo
+      <location-info
         :addresses="addresses"
         :ip="ip"
         :current_time="current_time"
       />
+      <map-view :lat_lng="lat_lng" />
     </div>
   </div>
 </template>
@@ -49,8 +50,8 @@ export default {
           this.ip
       );
       this.addresses = res;
+      this.lat_lng = [this.addresses.latitude, this.addresses.longitude];
       this.current_time = this.addresses.time_zone.current_time;
-      this.$router.push("/payal");
     },
   },
 };
