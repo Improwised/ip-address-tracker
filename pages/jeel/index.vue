@@ -60,4 +60,9 @@ export default {
   bottom: 160px;
   z-index: 0;
 }
+@media (max-width: 991px) {
+  .map {
+    bottom: 400px;
+  }
+}
 </style>

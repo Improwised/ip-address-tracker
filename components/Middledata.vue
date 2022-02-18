@@ -66,7 +66,7 @@ export default {
 .middle-div {
   display: flex;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   background: white;
   box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
   border-radius: 0.7em;
@@ -77,5 +77,16 @@ export default {
 
 .last-middle-input {
   border-style: none;
+}
+@media (max-width: 991px) {
+  .middle-input {
+    height: 15px;
+    border-style: none;
+  }
+
+  .middle-input-div {
+    padding: 0% 2%;
+    text-align: center;
+  }
 }
 </style>

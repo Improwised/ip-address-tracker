@@ -40,7 +40,7 @@ export default {
   padding-top: 2%;
   padding-bottom: 8%;
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 
 .header-heading {
@@ -71,5 +71,20 @@ export default {
   padding-left: 4%;
   padding-right: 4%;
   cursor: pointer;
+}
+@media (max-width: 991px) {
+  .header-div {
+    padding-bottom: 20%;
+  }
+
+  .header-heading {
+    font-size: 20px;
+    margin-right: 0;
+  }
+
+  .ip-input {
+    width: 280px;
+    font-size: 10px;
+  }
 }
 </style>
