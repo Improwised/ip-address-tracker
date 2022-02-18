@@ -5,7 +5,6 @@
       <input
         class="ip-input px-5"
         placeholder="Search for any ip address"
-        size="40"
         :value="ipAddress"
         @input="$emit('input', $event.target.value)"
       />
@@ -31,7 +30,9 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
 .header-div {
   text-align: center;
   background-image: url("@/static/pattern-bg.png");
@@ -39,19 +40,21 @@ export default {
   padding-top: 2%;
   padding-bottom: 8%;
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 
 .header-heading {
-  font-weight: 700;
+  margin-right: 3%;
+  font-weight: 200%;
   font-size: 35px;
   color: white;
-  font-family: sans-serif;
+  font-family: Rubik, sans-serif;
   padding-left: 3%;
   padding-bottom: 1%;
 }
 
 .ip-input {
+  width: 500px;
   border-radius: 15px 0 0 15px;
   border-style: none;
   font-size: 20px;
@@ -68,5 +71,20 @@ export default {
   padding-left: 4%;
   padding-right: 4%;
   cursor: pointer;
+}
+@media (max-width: 991px) {
+  .header-div {
+    padding-bottom: 20%;
+  }
+
+  .header-heading {
+    font-size: 20px;
+    margin-right: 0;
+  }
+
+  .ip-input {
+    width: 280px;
+    font-size: 10px;
+  }
 }
 </style>

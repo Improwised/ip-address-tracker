@@ -16,7 +16,7 @@
     </div>
     <div class="middle-input-div col-lg-3 col-sm-12">
       <label class="middle-label">ISP</label>
-      <h1 class="middle-input r-line">{{ ipData.isp }}</h1>
+      <h1 class="middle-input last-middle-input">{{ ipData.isp }}</h1>
     </div>
   </div>
 </template>
@@ -39,7 +39,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 
 .middle-input {
@@ -48,7 +48,7 @@ export default {
   font-weight: 500;
   font-family: Rubik, sans-serif;
   margin-bottom: 10%;
-  border-right: 0.5px solid hsl(0deg 0% 59%);
+  border-right: 1px solid hsl(0deg 0% 59%);
 }
 
 .middle-input-div {
@@ -66,7 +66,7 @@ export default {
 .middle-div {
   display: flex;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   background: white;
   box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
   border-radius: 0.7em;
@@ -75,7 +75,18 @@ export default {
   padding: 5% auto;
 }
 
-.r-line {
+.last-middle-input {
   border-style: none;
+}
+@media (max-width: 991px) {
+  .middle-input {
+    height: 15px;
+    border-style: none;
+  }
+
+  .middle-input-div {
+    padding: 0% 2%;
+    text-align: center;
+  }
 }
 </style>
