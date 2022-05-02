@@ -23,7 +23,7 @@
     "@nuxtjs/axios": "^5.13.6",
     "bootstrap": "^4.6.1",
     "bootstrap-vue": "^2.21.2",
-    "core-js": "^3.19.3",
+    "core-js": "^3.22.3",
     "leaflet": "^1.7.1",
     "leaflet-map-component": "^0.0.1",
     "lint": "^0.7.0",
